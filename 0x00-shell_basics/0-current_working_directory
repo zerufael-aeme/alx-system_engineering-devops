@@ -1,1 +1,2 @@
-#!/bin/bash\necho "Current working directory: $(realpath "$(pwd)")"
+#!/bin/bash
+pwd
