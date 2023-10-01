@@ -1,2 +1,2 @@
 #!/bin/bash
-find pwd -type d -print0 | xargs -0 chmod ugo+X
+chmod -R a+X
