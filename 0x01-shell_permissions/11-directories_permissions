@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod -R a+x pwd
+chmod -R a+X pwd
