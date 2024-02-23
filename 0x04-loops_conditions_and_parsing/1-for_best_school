@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# this script is diplaying "best school" 10 times
+
+n=10;
+output="Best School";
+for((i=1; i<=n; i++));
+do
+    echo "$output"
+done;

@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Bash script that prints "Best School" 10 times
+output="Best School";
+a=0;
+while [ $a -lt 11 ];
+do
+    if [ "$a" -eq 9 ]; then
+        echo "Hi"
+    else
+        echo "$output";
+    fi
+    ((a++));
+done;

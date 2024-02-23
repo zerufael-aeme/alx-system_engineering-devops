@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# this script is diplaying "best school" 10 times using unitl loop 
+
+n=10;
+output="Best School";
+until [ $n -eq 0 ];
+do
+    echo "$output";
+    ((n--));
+done;
