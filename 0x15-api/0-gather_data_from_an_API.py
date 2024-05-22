@@ -25,7 +25,8 @@ if __name__ == "__main__":
 
         # Print information
         print(
-            f"Employee {user['name']} is done with tasks ({len(comp_tasks)}/{len(todo)}):"
+            f"Employee {user.get('name')} is done with tasks "
+            f"({len(comp_tasks)}/{len(todo)}):"
         )
 
         # Print titles of completed tasks
