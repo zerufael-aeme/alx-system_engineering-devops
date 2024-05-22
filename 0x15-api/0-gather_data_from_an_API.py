@@ -24,10 +24,8 @@ if __name__ == "__main__":
         comp_tasks = [item for item in todo if item["completed"]]
 
         # Print information
-        print(
-            f"Employee {user.get('name')} is done with tasks "
-            f"({len(comp_tasks)}/{len(todo)}):"
-        )
+        print("Employee {} is done with tasks({}/{}):".format(
+        user.get("name"), len(comp_tasks), len(todos)))
 
         # Print titles of completed tasks
         for item in comp_tasks:
