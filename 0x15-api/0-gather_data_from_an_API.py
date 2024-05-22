@@ -5,18 +5,27 @@ import sys
 
 
 if __name__ == "__main__":
-    url_todos = "https://jsonplaceholder.typicode.com/todos?userId={}".format(sys.argv[1])
-    url_users = "https://jsonplaceholder.typicode.com/users/{}".format(sys.argv[1])
+    # Construct URLs for todos and users
+    user_id = sys.argv[1]
+    url_todos = f"https://jsonplaceholder.typicode.com/todos?userId={user_id}"
+    url_users = f"https://jsonplaceholder.typicode.com/users/{user_id}"
 
+    # Fetch data from API
     todos = requests.get(url_todos)
     users = requests.get(url_users)
 
+    # Check if requests are successful
     if todos.status_code == 200 and users.status_code == 200:
+        # Parse JSON responses
         todo = todos.json()
         user = users.json()
 
+        # Filter completed tasks
         comp_tasks = [item for item in todo if item["completed"]]
-        print("Employee {} is done with tasks ({}/{})".format(user['name'], len(todo), len(comp_tasks)))
 
+        # Print information
+        print(f"Employee {user['name']} is done with tasks({len(todo)}/{len(comp_tasks)}):")
+
+        # Print titles of completed tasks
         for item in comp_tasks:
-            print(item['title'])
+            print(f"\t {item['title']}")
