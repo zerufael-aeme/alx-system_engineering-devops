@@ -40,8 +40,8 @@ frontend zerufael-tech-frontend
 
 backend zerufael-tech-backend
     balance roundrobin
-    server 530580-web-01 54.164.101.10:80 check
-    server 530580-web-02 54.84.178.120:80 check
+    server 530580-web-01 54.197.87.21:80 check
+    server 530580-web-02 54.173.53.101:80 check
 "
 
 # shellcheck disable=SC2154
